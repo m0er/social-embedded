@@ -3,21 +3,21 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Instagram posts by m0er</title>
+    <title>Twitter posts by m0er</title>
   </head>
   <body>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
-        var url = 'http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/4YIOR4pY7d&callback=?';
+        var url = 'https://api.twitter.com/1/statuses/oembed.json?url=https://twitter.com/kimpikipiki/status/638689158819545089&callback=?';
         $.getJSON(url, function(data) {
           $('body').append(data.html);
         });
-        url = 'http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/4YHF4EJY5L&callback=?';
+        url = 'https://api.twitter.com/1/statuses/oembed.json?url=https://twitter.com/We_love_Piki/status/624394915095515136&callback=?';
         $.getJSON(url, function(data) {
           $('body').append(data.html);
         });
-        url = 'http://api.instagram.com/publicapi/oembed/?url=http://instagr.am/p/fA9uwTtkSN/&callback=?';
+        url = 'https://api.twitter.com/1.1/statuses/oembed.json?url=https://twitter.com/We_love_Piki/status/624391769552130052&widget_type=video&callback=?';
         $.getJSON(url, function(data) {
           $('body').append(data.html);
         });
