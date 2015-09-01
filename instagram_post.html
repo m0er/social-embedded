@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Instagram post by m0er</title>
+  </head>
+  <body>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var url = 'http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6kHj5ykG0C&callback=?';
+        $.getJSON(url, function(data) {
+          $('body').append(data.html);
+        });
+      });
+    </script>
+  </body>
+</html>
