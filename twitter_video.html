@@ -5,14 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Twitter video by m0er</title>
   </head>
-  <body>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <body id="tweet">
+    <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+   
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+   
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
     <script>
-      $(document).ready(function() {
-        var url = 'https://api.twitter.com/1.1/statuses/oembed.json?url=https://twitter.com/twitter/status/560070183650213889&widget_type=video&callback=?';
-        $.getJSON(url, function(data) {
-          $('body').append(data.html);
-        });
+      twttr.ready(function() {        
+        twttr.widgets.createTweet(
+          '624391769552130052',
+          document.getElementById('tweet')
+        );
       });
     </script>
   </body>
