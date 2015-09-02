@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Twitter post by m0er</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var url = 'https://www.tumblr.com/oembed/1.0?url=http://moer.tumblr.com/post/128150817054/소셜-임베디드-테스트&callback=?';
+        $.getJSON(url, function(data) {
+          $('body').append(data.html);
+        });
+        url = 'https://www.tumblr.com/oembed/1.0?url=http://moer.tumblr.com/post/128151622054/%EC%86%8C%EC%85%9C-%EC%9E%84%EB%B2%A0%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%8F%99%EC%98%81%EC%83%81&callback=?';
+        $.getJSON(url, function(data) {
+          $('body').append(data.html);
+        });
+        url = 'https://www.tumblr.com/oembed/1.0?url=http://staff.tumblr.com/post/119384689332/tumblr-tuesday-help-bonjour-french-words&callback=?';
+        $.getJSON(url, function(data) {
+          $('body').append(data.html);
+        });
+      });
+    </script>
+  </body>
+</html>
