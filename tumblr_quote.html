@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tumblr post by m0er</title>
+  </head>
+  <body>   
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var url = 'https://www.tumblr.com/oembed/1.0?url=http://oxl-or.tumblr.com/post/67059606648/%EB%82%B4%EA%B0%80-%EB%A7%8C%EC%95%BD-%EC%8B%A0%EC%9D%B4%EB%9D%BC%EB%A9%B4-%EB%82%98%EB%8A%94-%EC%B2%AD%EC%B6%98%EC%9D%84-%EC%9D%B8%EC%83%9D%EC%9D%98-%EB%81%9D%EC%97%90-%EB%91%90%EC%97%88%EC%9D%84-%EA%B2%83%EC%9D%B4%EB%8B%A4&callback=?';
+        $.getJSON(url, function(data) {
+          $('body').append(data.html);
+        });
+      });
+    </script>
+  </body>
+</html>
